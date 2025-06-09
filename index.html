@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Site</title>
+  <style>
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #91aafd;
+    }
+
+    nav button {
+      background: #91aafd;
+      color: #fff;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background: #7268f8;
+    }
+
+    .content {
+      display: none;
+      padding: 1.5rem;
+      max-width: 800px;
+      margin: auto;
+      background: #5ed49d;
+    }
+
+    .content.active { display: block; }
+
+    .portfolio-item img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .contact-info a {
+      color: #4a90e2;
+      text-decoration: none;
+      display: block;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Esse é meu site! </h1>
+
+  <nav>
+    <button class="tab-button active" onclick="showTab('boas-vindas', event)">Início</button>
+    <button class="tab-button" onclick="showTab('hobbies', event)">Hobbies</button>
+    <button class="tab-button" onclick="showTab('portfolio', event)">Projetos</button>
+    <button class="tab-button" onclick="showTab('contato', event)">Contato</button>
+  </nav>
+
+  <section id="boas-vindas" class="content active">
+    <h2>Bem-vindo</h2>
+    <p>Seja bem-vindo ao meu site pessoal. Aqui você encontrará informações sobre mim, meus hobbies, projetos e formas de contato. Fique à vontade para explorar.</p>
+    <ul>
+      <li>Lucca Albuquerque D'Angelo</li>
+      <li>17 anos</li>
+      <li> Recife, Pernambuco</li>
+      <li>1.76 metro</li>
+      <li>Faço o curso ciência da computação na CESAR School</li>
+    </ul>
+  </section>
+
+  <section id="hobbies" class="content">
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Jogar jogos online</li>
+      <li>Programar</li>
+      <li>Jogar futebol</li>
+      <li>Ficar com os amigos e família</li>
+      <li>Viajar</li>
+    </ul>
+  </section>
+
+  <section id="portfolio" class="content">
+    <h2>Projetos</h2>
+
+    <div class="portfolio-item">
+      <h3>Escape Room Inclusivo</h3>
+      <img src="file:///C:/Users/lucca/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/2BB0502C80B7432EEE4C5847A5FD077B/Imagem%20do%20WhatsApp%20de%202025-05-31%20%C3%A0(s)%2019.06.56_724b3b02.jpg" alt="Projeto 1 (imagem local)">
+      <p>Fiz com meu grupo um escape room para pessoas com deficiência visual. Ganhamos destaque no projeto mais inclusivo.</p>
+    </div>
+
+    <div class="portfolio-item">
+      <h3>Jogo no Bitsy</h3>
+      <img src="file:///C:/Users/lucca/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/28F7241796510E838DB4A1384AE1279D/Imagem%20do%20WhatsApp%20de%202025-06-03%20%C3%A0(s)%2015.15.03_874d2833.jpg" alt="Projeto 2 (imagem local)">
+      <p>Esse foi um joguinho simples com charadas que fizemos usando o Bitsy. Bem legal de testar e pensar.</p>
+    </div>
+
+  </section>
+
+  <section id="contato" class="content">
+    <h2>Fale Comigo</h2>
+    <div class="contact-info">
+      <a href="https://www.linkedin.com/in/lucca-dangelo-1176b3367/" target="_blank">LinkedIn</a>
+      <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbFPnXqlskxXtSDNtJDtJqgrhWJGnmdGbjBbjJcCtgxRLrtcjqqbzjWRFJDWMFWWLLsbSF"target="_blank">Email</a>
+      <p>Cel: (81) 99596-1345</p>
+      <a href="https://www.instagram.com/luccabdangelo/" target="_blank"  >Instagram</a>
+    </div>
+  </section>
+
+  <script>
+    function showTab(id, event) {
+      document.querySelectorAll('.content').forEach(sec => sec.classList.remove('active'))
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'))
+      document.getElementById(id).classList.add('active')
+      event.target.classList.add('active')
+    } 
+  </script>
+</body>
+</html>
